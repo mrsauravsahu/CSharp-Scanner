@@ -9,6 +9,9 @@ namespace System
         private List<object> values = new List<object>();
         private string delimiter;
         private TextReader inputStream;
+        
+        // Fixing error CS5001: Program `Scanner.exe' does not contain a static `Main' method suitable for an entry point
+        static void Main() {}
 
         public Scanner(string delimiter = " ")
         {
