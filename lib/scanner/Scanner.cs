@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace System
+namespace mrsauravsahu.scanner
 {
-    class Scanner
+    public class Scanner
     {
         private List<object> values = new List<object>();
         private string delimiter;
