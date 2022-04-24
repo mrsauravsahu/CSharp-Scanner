@@ -25,8 +25,12 @@ namespace System
         {
             if (values.Count == 0)
             {
-                values.AddRange((Regex.Split(inputStream.ReadLine(), delimiter)));
-                values.RemoveAll(p => string.Compare(p.ToString(), "") == 0);
+                var line = inputStream.ReadLine();
+                if (line is not null)
+                {
+                    values.AddRange((Regex.Split(line, delimiter)));
+                    values.RemoveAll(p => string.Compare(p.ToString(), "") == 0);
+                }
             }
         }
         public bool HasNext()
